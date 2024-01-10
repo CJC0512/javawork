@@ -11,6 +11,7 @@ public class Application2 {
         *    3. 변수를 사용한다.
         * */
 
+        /* 목차. 1. 변수 선언 */
         /* 설명. 자료형이란
         *   다양한 값의 형태별로 어느 정도의 크기를 하나의 값으로 취급할 것인지 미리 Compiler와 약속한 키워드이다.
         *   이러한 자료형은 기본자료형(Primitive Type)과 참조자료형(Reference Type)으로 나누어진다.
@@ -35,5 +36,48 @@ public class Application2 {
 
         /* 설명. 문자열은 참조 자료형이다.(feat. 대문자로 시작) */
         String str;        // 4 byte
+
+        /* 목차. 2. 변수에 값 대입(초기화) */
+        bnum = 1;
+        snum = 2;
+        inum = 4;       // int: 정수의 기본형
+        lnum = 8L;      // 정수는 21.XX.. 억을 넘어갈때(int의 범위를 벗어나면) L을 안붙이면 에러가 난다.
+                        // int의 범위: -2,147,483,648 ~ 2,147,483,647
+                        // 즉, 2,200,000,000L 에서 L을 빼면 오류 발생.
+
+        /* 필기. Java는 자동으로 형변환이 안되므로, 형식을 지정해줘야 한다. */
+        fnum = 4.0f;    // float 형
+        dnum = 8.0;     // double 형
+                        // double: 실수의 기본형
+
+        ch = 'a';
+        ch = 97;        // char 자료형은 문자를 숫자로 취급
+//        ch = -97;     // char 자료형은 양수만 취급하기에 오류 발생
+        isTrue = true;
+
+        /* 목차. 3. 변수 활용 */
+        System.out.println("bnum = " + bnum);
+        System.out.println("snum = " + snum);
+        System.out.println("inum = " + inum);
+        System.out.println("lnum = " + lnum);
+        System.out.println("fnum = " + fnum);
+        System.out.println("dnum = " + dnum);
+        System.out.println("ch = " + ch);
+        System.out.println("isTrue = " + isTrue);
+        System.out.println("long과 int의 합 = " + (lnum + inum));      // 자동 형변환으로 인해 long형으로 변환
+
+        /* 설명. 변수의 선언 및 초기화는 한번에 가능하다. */
+        int kor = 90;
+        int math = 80;
+        int eng = 75;
+
+        int sum = kor + math + eng;
+        double avg = sum/3;
+        double avg2 = sum/3.0;          // 나눗셈을 할 때는 소수점을 고려해야 한다.
+                                        // (하나라도 float 또는 double 형이어야 한다.)
+
+        System.out.println("총합: " + sum);
+        System.out.println("평균: " + avg);
+        System.out.println("평균: " + avg2);
     }
 }
