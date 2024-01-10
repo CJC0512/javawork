@@ -38,7 +38,7 @@ public class Appliacation3 {
         /* 목차. 2-1. 변수명의 길이 제한은 없다. 하지만 적당히 하자.*/
         int dafjladeaejoifadlksafdfjasdlfjasdlkf;
 
-        /* 목차. 2-2. 변수명이 합성어로 이루어진 경우 첫 단어는 소문자, 두번 째 시작 단어는 대문자로 시작한다. */
+        /* 목차. 2-2. 변수명이 합성어로 이루어진 경우 첫 단어는 소문자, 두번째 시작 단어는 대문자로 시작한다. */
         int maxAge = 50;
         int minAge = 10;
 //        int max_age = 50;
@@ -54,7 +54,7 @@ public class Appliacation3 {
 //        String goHome;
         String Home;
 
-        /* 목차. 2-6. boolean 자료형은 긍정의뭄ㄴ문 형태로 작성한다. */
+        /* 목차. 2-6. boolean 자료형은 긍정의문문 형태로 작성한다. */
         boolean isAlive = true;
         boolean isDead = false;
 
