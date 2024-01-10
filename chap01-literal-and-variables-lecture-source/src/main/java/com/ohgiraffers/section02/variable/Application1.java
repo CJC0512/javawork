@@ -71,5 +71,9 @@ public class Application1 {
         sum = sum + 10;
         sum = sum + 10;
         System.out.println("sum에 10을 4번 더 누적하면 현재 sum의 값은 :" + sum);
+
+        /* 설명. 동일한 sum이라는 하나의 변수를 어느 시점에 출력하느냐에 따라 출력 결과는 달라진다.
+        *        -> 변수명은 같지만 들어있는 값은 달라짐
+        * */
     }
 }
