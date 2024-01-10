@@ -34,6 +34,6 @@ public class Application2 {
         boolean isTrue;    // 1 byte
 
         /* 설명. 문자열은 참조 자료형이다.(feat. 대문자로 시작) */
-        String str;
+        String str;        // 4 byte
     }
 }
