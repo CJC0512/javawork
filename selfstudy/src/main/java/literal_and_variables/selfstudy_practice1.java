@@ -8,9 +8,16 @@ public class selfstudy_practice1 {
          * */
         System.out.println("\n======== 궁금 1 ========");
         System.out.println(33 + '\u0000' + 65);
+        System.out.println('\u0000');
+        
+        char ch = '한';
+
+        System.out.println("ch = " + ch);
+        System.out.println(ch);
 
 
         /* 해석. 1. '\u0000'은 없는 문자로 처리되어 33 + 65와 동일한 결과를 가진다.
+        *           '\u0000' == NULL
         *       출력.
                         98
         * */
