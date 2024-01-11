@@ -35,7 +35,7 @@ public class Application1 {
         System.out.println("num = " + num);
 
         num /= 2;
-        /* 궁금. 여기에 실수 속성을 부여하면??*/
+//        /* 궁금. 여기에 실수 속성을 부여하면??*/
 //        num /= 3;       // 결과 8 (소수 X)
 //        num /= (double)3;   // 결과 8 (소수 X)
 //        num /= 3.0;         // 결과 8 (소수 x)
