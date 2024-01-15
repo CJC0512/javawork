@@ -2,6 +2,8 @@ package com.ohgiraffers.section01.array;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 public class Application4 {
 
@@ -21,10 +23,11 @@ public class Application4 {
 
         /* 필기. 합계(sum)와 평균(avg) 구하기 */
         int sum = 0;
-        double avg = sum / (double) num;
 //        double avg = sum / (double) score.length;
         for (int perscore : score) sum += perscore;
         System.out.println("sum = " + sum);
+        System.out.println(IntStream.of(score).sum());
+        double avg = sum / (double) num;
         System.out.println("avg = " + avg);
     }
 }
