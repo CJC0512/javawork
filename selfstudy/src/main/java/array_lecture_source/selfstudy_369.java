@@ -38,7 +38,7 @@ public class selfstudy_369 {
             nowNum = Integer.toString(num);     // num을 문자열로 변환
             stack = getStack(nowNum, stack);    // 현재 "짝"이 있는지 검사.
 
-            /* 설명. 현재 stack(짝의 개수)가 0 이라면 현재 i의 값을 반환*/
+            /* 설명. 현재 stack(=짝의 개수)가 0 이라면 현재 i의 값을 반환*/
             if (stack == 0) answer = nowNum;
             else answer = return_answer(stack);
 
@@ -55,6 +55,7 @@ public class selfstudy_369 {
 
                 /* 설명. 컴퓨터의 condition이 정상적이라면 정답을 반환. 비정상적이라면 오답을 반환 */
                 if (computers_condition == num) {
+                    /* 설명. 현재 stack(=짝의 개수)가 0 이라면 현재 num의 값을 출력*/
                     if (stack == 0) System.out.println(computers_condition);
                     else System.out.println(answer);
                     compare_answer(answer, answer);
@@ -73,10 +74,10 @@ public class selfstudy_369 {
         else System.out.println("플레이어 패배...!!");
     }
 
-    private static int getStack(String nowI, int stack) {
+    private static int getStack(String nowNum, int stack) {
         /* 설명. 3, 6, 9가 있는 지 문자별로 검사 후, 그만큼 stack으로 "짝"의 개수를 반환*/
-        for (int j = 0; j < nowI.length(); j++) {
-            if (nowI.charAt(j) == '3' || nowI.charAt(j) == '6' || nowI.charAt(j) == '9') {
+        for (int j = 0; j < nowNum.length(); j++) {
+            if (nowNum.charAt(j) == '3' || nowNum.charAt(j) == '6' || nowNum.charAt(j) == '9') {
                 stack++;
             }
         }
