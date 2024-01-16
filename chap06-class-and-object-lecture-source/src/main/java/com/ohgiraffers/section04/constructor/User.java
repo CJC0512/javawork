@@ -18,7 +18,9 @@ public class User {
         this.pwd = pwd;
         this.name = name;
         this.enrollDate = enrollDate;
+
     }
+
 
     public String forInformation() {
         return this.id + ", " + this.pwd + ", " + this.name + ", " + this.enrollDate;

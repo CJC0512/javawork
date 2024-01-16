@@ -1,4 +1,4 @@
-package array_lecture_source;
+package selfstudy.blackjack;
 
 import java.util.Random;
 
