@@ -85,14 +85,14 @@ public class B_nestedFor {
         Scanner sc = new Scanner(System.in);
         int num = -2;
 
-        /* 설명. 멋진 다이아몬드를 완성하기 위한 홀수인 정수 입력 받기 */
-        while (num % 2 == 0) {
-            System.out.print("홀수인 정수를 입력하시오: ");
-            num = sc.nextInt();
-        }
+        /* 설명. 멋진 다이아몬드를 완성하기 위한 정수 입력 받기 */
+        System.out.print("정수를 입력하시오: ");
+        num = sc.nextInt();
+        int divNum = (num % 2 == 0) ? 1 : 0;
+
         /* 설명. 상단 및 중앙 별 출력 */
         for (int i = 0; i <= num; i++) {
-            if (i % 2 == 0)
+            if (i % 2 == divNum)
                 continue;
             printspace((num - i) / 2);
             printstar(i);
@@ -101,7 +101,7 @@ public class B_nestedFor {
         }
         /* 설명. 하단 별 출력 */
         for (int i = num - 2; i >= 0; i--){     // 중앙 바로 밑행부터 실행하기 위해 num - 2부터 시작
-            if (i % 2 == 0)
+            if (i % 2 == divNum)
                 continue;
             printspace((num - i) / 2);
             printstar(i);
