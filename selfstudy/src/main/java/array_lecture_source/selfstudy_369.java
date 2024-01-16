@@ -52,21 +52,23 @@ public class selfstudy_369 {
                 System.out.print("\n컴퓨터의 차례...\n 컴퓨터의 답은?: ");
                 /* 설명. 약 5%의 확률로 컴퓨터가 오답을 반환 */
                 computers_condition = i + (int) Math.round(Math.random() * 0.1 + 0.405);
-                // 여기 수정
+
+
+                /* 설명. 컴퓨터의 condition에 따라 정답을 반환하거나 오답을 반환함.*/
                 if (computers_condition == i) {
                     if (stack == 0) System.out.println(computers_condition);
                     else System.out.println(answer);
-                    compare_answer(Integer.toString(computers_condition), answer);
+                    compare_answer(answer, answer);
                 }
-                else{
-                    System.out.println(answer);
-                    compare_answer(answer,answer);
+                else {
+                    System.out.println(computers_condition);
+                    compare_answer(Integer.toString(computers_condition), answer);
                 }
                 turn = true;
             }
 
             i++;
-            if (i > 20) isPlay = false;
+            if (i > 100) isPlay = false;
         } while (isPlay);
 
         if (turn) System.out.println("플레이어 승리!!!");
@@ -84,7 +86,7 @@ public class selfstudy_369 {
 
     private static void compare_answer(String users_answer, String answer) {
         if (Objects.equals(users_answer, answer)) {
-            System.out.println("정답!!! (" + i + ") " + answer);
+            System.out.println("정답!!! " + answer);
 
         } else {
             System.out.println("땡!!! 정답은 (" + i + ") " + answer);
