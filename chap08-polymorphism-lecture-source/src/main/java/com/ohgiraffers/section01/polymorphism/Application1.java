@@ -47,11 +47,11 @@ public class Application1 {
         /* 필기.
         *   instanceof란?
         *    해당 객체의 타입을 런타임 시점에 확인하기 위한 연산자 */
-        if(an1 instanceof Tiger){
-            ((Tiger)an1).bite();
+        if(an1 instanceof Tiger){               
+            ((Tiger)an1).bite();                // 소괄호부터 순서대로 해석
         }
         if (an1 instanceof Rabbit) {
-//            ((Rabbit).an1).jump();
+//            ((Rabbit).an1).jump();            // 소괄호부터 순서대로 해석하기에 an1(Tiger)는 Rabbit으로 down-casting이 안되기에 오류발생
         }
 
         /* 설명. 다형성은 상속관계의 객체들과간에 형변환 */
