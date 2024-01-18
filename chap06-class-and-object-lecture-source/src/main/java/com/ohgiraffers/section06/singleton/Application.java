@@ -20,7 +20,7 @@ public class Application {
          *
          * 필기.
          *  싱글톤 구현 방법
-         *   1. 이론 초기화(Eager Initialization): 프로그램 실행 시 생성
+         *   1. 이른 초기화(Eager Initialization): 프로그램 실행 시 생성
          *   2. 늦은 초기화(Lazy Initialization): 클래스 선언 시 생성
          * */
 
