@@ -13,6 +13,14 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/src/main/java" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>

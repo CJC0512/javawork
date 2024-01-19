@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bcca116-ea20-48f8-b5e7-295a1a093fc5" name="Changes" comment="chap07 gradel problem resolve&#10;&#10;chap07 gradel problem resolve">
-      <change afterPath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/src/main/java/com/ohgiraffers/section01/abstractclass/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/src/main/java/com/ohgiraffers/section02/abstractclass/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/src/main/java/com/ohgiraffers/section01/abstractclass/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/src/main/java/com/ohgiraffers/section02/abstractclass/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/src/main/java/com/ohgiraffers/section01/abstractclass/SmartPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/src/main/java/com/ohgiraffers/section02/abstractclass/SmartPhone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chap08-polymorphism-lecture-source/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +109,7 @@
       <workItem from="1705566281539" duration="101000" />
       <workItem from="1705566402107" duration="49000" />
       <workItem from="1705566488026" duration="1257000" />
-      <workItem from="1705622426565" duration="600000" />
+      <workItem from="1705622426565" duration="1202000" />
     </task>
     <task id="LOCAL-00001" summary="chap07 gradel problem resolve&#10;&#10;chap07 gradel problem resolve">
       <option name="closed" value="true" />
