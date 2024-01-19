@@ -62,7 +62,7 @@ public class BookDTO {
                 '}';
     }
 
-    /* 목차. 2. equlas() 오버라이딩 */
+    /* 목차. 2. equals() 오버라이딩 */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
