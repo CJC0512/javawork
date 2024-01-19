@@ -27,12 +27,12 @@ public class Application3 {
         System.out.println(Arrays.toString(empArr3));       // [300, 이순신, 경기도]
         System.out.println();
 
+        /* 설명. StringTokenizer 를 통해 문자열에서 구분자를 통해 토큰 단위로 구분하여 활용하기 */
         String colors = "red, yellow, green, purple, blue";
-        StringTokenizer colorStringTokenizer = new StringTokenizer(colors, ",");
+        StringTokenizer colorStringTokenizer = new StringTokenizer(colors, ", ");
 
         while(colorStringTokenizer.hasMoreElements()){
             System.out.println(colorStringTokenizer.nextToken());
         }
-
     }
 }

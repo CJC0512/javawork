@@ -39,16 +39,16 @@ public class Application1 {
         *   indexOf(): 문자열에서 특정 문자를 탐색하여 처음 일치하는 인덱스 위치를 정수형으로 반환한다.
         *              (일치하지 않으면 -1 반환)
         * */
-        String indexOf = "java mariaDB";
-        System.out.println("indexOf('a'): " + indexOf.indexOf('a'));
-        System.out.println("indexOf('z'): " + indexOf.indexOf('z'));
+        String indexOfStr = "java mariaDB";
+        System.out.println("indexOf('a'): " + indexOfStr.indexOf('a'));
+        System.out.println("indexOf('z'): " + indexOfStr.indexOf('z'));
 
         /* 필기.
         *   lastIndexOf(): 문자열 탐색을 뒤에서부터 하고 처음 일치하는 위치의 인덱스르 반환한다.
         *                  (일치하지 않으면 -1 반환)
         * */
-        System.out.println("lastIndexOf('a'): " + indexOf.lastIndexOf('a'));
-        System.out.println("lastIndexOf('z'): " + indexOf.lastIndexOf('z'));
+        System.out.println("lastIndexOf('a'): " + indexOfStr.lastIndexOf('a'));
+        System.out.println("lastIndexOf('z'): " + indexOfStr.lastIndexOf('z'));
 
         /* 필기.
         *   trim(): 문자열의 앞 뒤에 공백을 제거한 문자열을 반환한다.
@@ -56,6 +56,11 @@ public class Application1 {
         String trimStr = "      java        ";
         System.out.println("trimStr: #" + trimStr + "#");
         System.out.println("trimStr: #" + trimStr.trim() + "#");
+
+        /* 필기. java에는 ltrim, rtrim이 없지만 구현은 할 수 있다. https://chragu.com/entry/Java-Trim-LTrim-RTrim
+        *   공백은 \s 로 표기하기에 (String).ReplaceAll("\\s+", "")에 ^ 또는 $ 로 ltrim, rtrim을 구현할 수 있다.
+        *   */
+
 
         /* 필기.
         *   toLowerCase(): 모든 문자를 소문자로 변환
