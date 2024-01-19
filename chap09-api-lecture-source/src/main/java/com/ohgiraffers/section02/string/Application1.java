@@ -32,7 +32,7 @@ public class Application1 {
         /* 필기.
         *   concat(): 문자열에 인자로 전달된 문자열을 합쳐서 새로운 문자열 반환
         * */
-        System.out.println("concat(): " + str2.concat(str5));
+        System.out.println("concat(): " + str2.concat(str5));       // javamariaDB
         System.out.println("str2: " + str2);
 
         /* 필기.
