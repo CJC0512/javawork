@@ -12,9 +12,6 @@ public class Application1 {
 
         /* 설명. Wrapper 클래스 자료형을 기본 자료형으로 변환할 수 있다. (언박싱, unboxing) */
         int unboxingValue = boxingInt.intValue();
-//        int boxingInteger1 = (int)Integer.valueOf(20);
-//        int boxingInteger2 = (int)intValue;
-
 
         /* 설명. 기본 자료형과 Wrapper 클래스는 자동으로 박싱 및 언박싱이 일어난다. */
         Integer autoBoxingInt = intValue;
