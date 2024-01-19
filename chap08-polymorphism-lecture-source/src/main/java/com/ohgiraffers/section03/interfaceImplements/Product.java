@@ -14,4 +14,6 @@ public class Product implements InterProduct, Serializable {      // 인터페�
     public void defaultMethod() {           // 오버라이딩 시에는 default 예약어 제거할 것
         System.out.println("Product 클래스에서 인터페이스로부터 물려받은 defaultMethod 호출됨...");
     }
+
+
 }
