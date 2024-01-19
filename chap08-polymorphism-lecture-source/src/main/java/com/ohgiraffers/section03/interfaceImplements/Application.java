@@ -12,6 +12,7 @@ public class Application {
 
         /* 설명. 추상클래스와 인터페이스의 차이는 면접 단골 질문이니 잘 알고 정리해 두자 */
 //        InterProduct ip1 = new InterProduct();      // 생성자가 없는 인터페이스는 객체 생성 X
-        InterProduct ip2 = new Product();           // 다만 타입으로 활용이 가능하다. (다형성 가능)
+        InterProduct ip2 = new Product();           // 다만 타입으로 활용이 가능하다. (다형성 가능)(타입은닉)
     }
+
 }
