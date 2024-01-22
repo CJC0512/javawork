@@ -12,7 +12,7 @@ public class Application1 {
         System.out.println("timeOf = " + timeOf);       // 지정항 시간
 
         LocalDate dateNow = LocalDate.now();
-        LocalDate dateOf = LocalDate.of(2024,1,22);
+        LocalDate dateOf = LocalDate.of(2024, 1, 22);
         System.out.println("dateNow = " + dateNow);
         System.out.println("dateOf = " + dateOf);
 
@@ -22,7 +22,7 @@ public class Application1 {
         System.out.println("dateTImeOf = " + dateTImeOf);
 
         ZonedDateTime zonedDateTimeNow = ZonedDateTime.now();
-        ZonedDateTime zonedDateTimeOf = ZonedDateTime.of(dateOf,timeOf, ZoneId.of("Asia/Seoul"));
+        ZonedDateTime zonedDateTimeOf = ZonedDateTime.of(dateOf, timeOf, ZoneId.of("Asia/Seoul"));
         System.out.println("zonedDateTimeOf = " + zonedDateTimeNow);
         System.out.println("zonedDateTimeOf = " + zonedDateTimeOf);
     }

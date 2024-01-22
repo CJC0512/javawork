@@ -7,18 +7,23 @@ public class Application2 {
 
         /* 수업목표. 와일드카드에 대해 이해할 수 있다. */
         WildCardFarm wildCardFarm = new WildCardFarm();
+        RabbitFarm<Rabbit> rabbitFarm = new RabbitFarm<>();
+        rabbitFarm.setAnimal(new Rabbit());
 
-        wildCardFarm.anyType(new RabbitFarm<Rabbit>());
-        wildCardFarm.anyType(new RabbitFarm<Bunny>());
-        wildCardFarm.anyType(new RabbitFarm<DrunkenBunny>());
+        RabbitFarm<Bunny> bunnyRabbitFarm = new RabbitFarm<>(new Bunny());
+        RabbitFarm<DrunkenBunny> drunkenBunnyRabbitFarm = new RabbitFarm<>(new DrunkenBunny());
 
-//        wildCardFarm.extendsType(new RabbitFarm<Rabbit>());
-        wildCardFarm.extendsType(new RabbitFarm<Bunny>());
-//        wildCardFarm.extendsType(new RabbitFarm<DrunkenBunny>());
+        wildCardFarm.anyType(rabbitFarm);
+        wildCardFarm.anyType(bunnyRabbitFarm);
+        wildCardFarm.anyType(drunkenBunnyRabbitFarm);
 
-        wildCardFarm.superType(new RabbitFarm<Rabbit>());
-        wildCardFarm.superType(new RabbitFarm<Bunny>());
-//        wildCardFarm.superType(new RabbitFarm<DrunkenBunny>());
+//        wildCardFarm.extendsType(rabbitFarm);
+        wildCardFarm.extendsType(bunnyRabbitFarm);
+//        wildCardFarm.extendsType(drunkenBunnyRabbitFarm);
+
+        wildCardFarm.superType(rabbitFarm);
+        wildCardFarm.superType(bunnyRabbitFarm);
+//        wildCardFarm.superType(drunkenBunnyRabbitFarm);
 
 
 

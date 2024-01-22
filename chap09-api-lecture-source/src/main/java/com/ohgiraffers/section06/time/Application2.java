@@ -23,7 +23,7 @@ public class Application2 {
         System.out.println("월 숫자: " + localDate.getMonthValue());
         System.out.println("월 중에 몇 번째 일: " + localDate.getDayOfMonth());
         System.out.println("1년 중에 몇 번째 일: " + localDate.getDayOfYear());
-        System.out.println("한 주의 몇 번째 일: " + localDate.getDayOfWeek());
+        System.out.println("한 주의 몇 번째 일(=요일): " + localDate.getDayOfWeek());
 
         ZonedDateTime zonedDateTime = ZonedDateTime.now();
         System.out.println("zonedDateTime: " + zonedDateTime);
