@@ -12,7 +12,7 @@ public class Application4 {
         /* 필기.
         *   Stack이란?
         *   후입선출(LIFO-Last In First Out) 또는 선입후출(FILO-First In Last Out) 구조의 자료구조이다.
-        *   push(), pop(), peek() 등의 메소드를 활용하여 자룔를 처리할 수 있다.
+        *   push(), pop(), peek() 등의 메소드를 활용하여 자료를 처리할 수 있다.
         *   vector를 상속한 클래스이다.
         * */
         integerStack.push(1);

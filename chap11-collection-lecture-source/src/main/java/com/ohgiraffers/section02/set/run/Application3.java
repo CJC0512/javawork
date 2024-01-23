@@ -1,5 +1,7 @@
 package com.ohgiraffers.section02.set.run;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -26,7 +28,5 @@ public class Application3 {
 
         /* 설명. 출력 시에는 오름차순으로 출력 되도록 작성 */
         System.out.println("lotto = " + lotto);
-
-        /* 설명. [과제] 중복되지 않는 번호를 발생시켜 로또 번호 발생기 만들기(Set 사용하지 않고) */
     }
 }
