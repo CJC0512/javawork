@@ -24,8 +24,8 @@ public class Application3 {
 
             fout.write(bArr, 1, 3);
 
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+//        } catch (FileNotFoundException e) {           // 사실상 쓰이지가 않으나 throws 한 것이 FileNOtFoundException이니 관례적으로 작성해준다.
+//            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {

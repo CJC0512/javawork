@@ -6,9 +6,8 @@ import java.io.IOException;
 public class Application {
     public static void main(String[] args) {
 
-        /* 수업목표. File 클래스의 사용 용법을 이해할 수 있다. */
-        File file = new File("src\\main/java/com/ohgiraffers/section01/file/test.txt");
-
+        /* 수업목표. File 클래스의 사용 방법을 이해할 수 있다. */
+        File file = new File("src/main/java/com/ohgiraffers/section01/file/test.txt");
         try {
 
             /* 설명. 생성 될 때 인지한 파일의 경로 및 파일명을 바탕으로 파일을 생성 후 성공 여부를 반환한다. */
