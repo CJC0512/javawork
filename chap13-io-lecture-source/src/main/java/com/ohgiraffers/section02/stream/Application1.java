@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Application1 {
     public static void main(String[] args) {
@@ -24,14 +26,30 @@ public class Application1 {
              *  (반환한 값이 int이기 때문에 문자로 활용하기 위해서는 char로 형변환을 진행한다.)
             * */
             int input = 0;
+//            while((input = fin.read()) != -1) {
+//                System.out.println((char)input);
+//            }
+
+            /* 설명. 파일로부터 읽어온 값을 ArrayList에 누적 */
+            List<Character> arr = new ArrayList<>();
             while((input = fin.read()) != -1) {
-                System.out.println((char)input);
+                arr.add((char) input);
+            }
+
+            for(char ch: arr) {
+                System.out.print(ch);
             }
 
         } catch (FileNotFoundException e) {
             System.out.println("해당 파일 없는데?!!");
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if(fin != null) fin.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
