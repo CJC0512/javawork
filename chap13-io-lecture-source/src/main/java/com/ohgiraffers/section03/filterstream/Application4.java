@@ -72,7 +72,7 @@ public class Application4 {
             System.out.println("객체 단위 파일 입력 완료");
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {                // readObject 로 인한 예외처리
             throw new RuntimeException(e);
         } finally {
             try {

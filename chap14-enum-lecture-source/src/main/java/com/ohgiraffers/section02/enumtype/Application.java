@@ -1,6 +1,7 @@
 package com.ohgiraffers.section02.enumtype;
 
 
+import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class Application {
             System.out.println("두 과목은 같은 과목입니다. (= 싱글톤이다.)");
         }
 
-        /* 설명. 3. toString() 혹은 name()을 이용하여 필드명을 문자열로 변경하기 쉽다. (feat.switch 안씀) */
+        /* 설명. 3. toString() 혹은 name()을 이용하여 필드명을 문자열로 변경하기 쉽다. (feat.switch 안 씀) */
         System.out.println(Subjects.JAVA.toString());           // toString()을 통해 해당 name을 이용하여 출력문을 커스터마이징할 수 있다. 
         System.out.println(Subjects.JAVA.name());
 
@@ -35,6 +36,8 @@ public class Application {
             System.out.println(s.name());
             System.out.println();
         }
+
+//        System.out.println(Arrays.toString(Subjects.values()));
         
         /* 설명. 5. 타입 안전을 보장할 수 있다. */
         printSubjects(Subjects.JAVA);
