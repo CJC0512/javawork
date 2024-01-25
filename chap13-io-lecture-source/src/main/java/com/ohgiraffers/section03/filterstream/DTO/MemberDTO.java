@@ -5,7 +5,9 @@ import java.io.Serializable;
 /* 설명. MemberDTO 타입의 객체를 객체단위 입출력(Object 관련 스트림)을 하기 위해서는 Serializable 인터페이스를 구현해야 된다. */
 public class MemberDTO implements Serializable {        // 직렬화를 위해 implements 해 줘야함..
     private String id;
-    private String pwd;
+
+    /* 설명. transient 키워드가 붙은 필드는 직렬화에서 제외한다. */
+    private /* transient */ String pwd;
     private String name;
     private String email;
     private int age;
