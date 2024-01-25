@@ -81,4 +81,11 @@ public class MemberRepository {
     public ArrayList<Member> selectAllMembers() {
         return memberList;
     }
+
+    public Member selectMember(int memNo) {
+        for (Member m : memberList){
+            if (m.getMemNo() == memNo) return m;
+        }
+        return null;
+    }
 }

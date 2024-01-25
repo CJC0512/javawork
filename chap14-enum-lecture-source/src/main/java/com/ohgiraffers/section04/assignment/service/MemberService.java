@@ -13,8 +13,15 @@ public class MemberService {
     public void selectAllMembers() {
         ArrayList<Member> selectedMembers = mr.selectAllMembers();
 //        System.out.println("===== service 까지 잘 반환되어 오나 확인 =====");
-        for(Member m : selectedMembers){
+        for (Member m : selectedMembers) {
             System.out.println(m);
         }
+    }
+
+    /* 설명. 전달된 회원 번호를 활용해 repository에 있는 memberList로부터 해당 회원 찾아 반환 받기 */
+    public void selectMember(int memNo) {
+        Member selectedMember = mr.selectMember(memNo);
+        if (selectedMember != null) System.out.println("조회된 회원은: " + selectedMember);
+        else System.out.println("일치하는 회원 정보가 존재하지 않습니다.");
     }
 }
