@@ -9,9 +9,9 @@ import java.util.ArrayList;
 /* 설명. 데이터와 입출력을 위해 만들어지며, 성공 실패 결과를 반환하는 클래스 */
 public class MemberRepository {
 
-    private ArrayList<Member> memberlist = new ArrayList<>();
+    private ArrayList<Member> memberList = new ArrayList<>();
 
-    /* 설명. 프로그램이 켜지자 마자(MemberRepository()가 실행되자마자) 파일에 Dummy 데이터 추가 및 입력*/
+    /* 설명. 프로그램이 켜지자 마자(MemberRepository()가 실행되자마자) 파일에 Dummy 데이터 추가 및 입력받기 */
     public MemberRepository() {
         ArrayList<Member> members = new ArrayList<>();
         members.add(new Member(1, "user01", "pass01", 20,
@@ -23,6 +23,11 @@ public class MemberRepository {
 
         saveMembers(members);
         loadMembers();
+
+//        System.out.println("===== repository에서 회원정보 다 읽어왔는지 확인 ");
+//        for (Member m : memberlist){
+//            System.out.println(m);
+//        }
     }
 
 
@@ -58,11 +63,22 @@ public class MemberRepository {
         try (ObjectInputStream ois = new ObjectInputStream(
                 new BufferedInputStream(
                         new FileInputStream("src/main/java/com/ohgiraffers/section04/assignment/db/memberDB.dat")))) {
-            System.out.println(ois.readObject());
+
+            /* 설명. 파일로부터 모든 회원 정보를 읽어 memeberList에 추가(add) */
+            while (true) {
+                memberList.add((Member) (ois.readObject()));
+            }
+        } catch (EOFException e) {
+            System.out.println("회원 정보 모두 로딩됨...");
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /* 설명. */
+    public ArrayList<Member> selectAllMembers() {
+        return memberList;
     }
 }

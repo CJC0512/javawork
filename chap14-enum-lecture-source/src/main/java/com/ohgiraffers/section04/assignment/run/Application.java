@@ -23,10 +23,8 @@ public class Application {
             System.out.print("메뉴를 선택해 주세요: ");
 
             int input = sc.nextInt();
-
             switch(input){
-                case 1:
-                    new MemberRepository();
+                case 1: mm.selectAllMembers();
                     break;
                 case 2:
                     break;
