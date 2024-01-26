@@ -19,6 +19,7 @@ public class Application2 {
 
         /* 설명. main 쓰레드에서 스트림을 사용하여 확인 */
         System.out.println("====== normal stream");
+//        stringList.stream().forEach(Application2::print);       // stream() 생략
 //        stringList.forEach(s -> System.out.println(s + " : " + Thread.currentThread().getName()));
         stringList.forEach(Application2::print);
 

@@ -15,16 +15,19 @@ public class MemberRepository {
     /* 설명. 프로그램이 켜지자 마자(MemberRepository()가 실행되자마자) 파일에 Dummy 데이터 추가 및 입력받기 */
     public MemberRepository() {
         ArrayList<Member> members = new ArrayList<>();
-        members.add(new Member(1, "user01", "pass01", 20,
-                new String[]{"발레", "수영"}, BloodType.A));
-        members.add(new Member(2, "user02", "pass02", 10,
-                new String[]{"게임", "영화 시청"}, BloodType.B));
-        members.add(new Member(3, "user03", "pass03", 15,
-                new String[]{"음악감상", "독서", "망상"}, BloodType.O));
 
         /* 설명. 회원가입 기능 추가 후 이제는 파일이 기존에 존재하면(처음이 아니므로) 회원 3명으로 초기화 하기를 하지 않는다. */
         File file = new File(filePath);
-        if (!file.exists()) saveMembers(members);
+        if (!file.exists()) {
+            members.add(new Member(1, "user01", "pass01", 20,
+                    new String[]{"발레", "수영"}, BloodType.A));
+            members.add(new Member(2, "user02", "pass02", 10,
+                    new String[]{"게임", "영화 시청"}, BloodType.B));
+            members.add(new Member(3, "user03", "pass03", 15,
+                    new String[]{"음악감상", "독서", "망상"}, BloodType.O));
+
+            saveMembers(members);
+        }
         loadMembers();
 
 //        System.out.println("===== repository에서 회원정보 다 읽어왔는지 확인 ");

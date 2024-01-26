@@ -43,8 +43,8 @@ public class Application1 {
         System.out.println();
 
         /* 설명. 4. iterator()를 활용하여 수열 형태의 스트림을 생성할 수도 있다. */
-        Stream<Integer> intStream = Stream.iterate(10, value -> value * 2)
-                .limit(10);
+        Stream<Integer> intStream = Stream.iterate(10, value -> value * 2)          // seed는 초기값
+                .limit(10);                                                      // maxSize는 반복횟수
         intStream.forEach(value -> System.out.println(value + " "));
     }
 }

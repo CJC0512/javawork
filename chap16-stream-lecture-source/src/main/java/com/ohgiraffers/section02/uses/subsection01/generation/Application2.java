@@ -29,6 +29,10 @@ public class Application2 {
         *   doubles(갯수): 난수를 활용한 DoubleStream을 갯수만큼 생성하여 반환한다.
         *   boxed(): 기본 타입 스트림인 XXXStream을 박싱하여 Wrapper 타입의 Stream<XXX>로 변환한다.
         * */
+
+        /* 필기. DoubleStream으로 받을 수 있으나, 개발상 편의를 위해, 모든 Object를 받을 수 있는 Stream에 Generic을 걸어
+        *       편하게 다루기 위해, boxed()를 해줘서 값을 Strema<Generic> 꼴로 저장해준다.
+        * */
         Stream<Double> doubleStream = new Random().doubles(5).boxed();
         doubleStream.forEach(value -> System.out.println(value + " "));
         System.out.println();
