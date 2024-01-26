@@ -28,6 +28,21 @@ public class Member implements Serializable {           // 객체 입출력을 �
         BloodType = bloodType;
     }
 
+    public Member(String id, String pwd, int age, String[] hobbies) {
+        this.id = id;
+        this.pwd = pwd;
+        this.age = age;
+        this.hobbies = hobbies;
+    }
+
+    public void setBloodType(com.ohgiraffers.section04.assignment.aggregate.BloodType bloodType) {
+        BloodType = bloodType;
+    }
+
+    public void setMemNo(int memNo) {
+        this.memNo = memNo;
+    }
+
     public int getMemNo() {
         return memNo;
     }
