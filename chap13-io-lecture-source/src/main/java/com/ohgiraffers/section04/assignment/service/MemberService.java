@@ -38,7 +38,7 @@ public class MemberService {
 
     /* 설명. 입력받아 넘어온 회원이 가질 번호를 만들고 추가 후 repository로 전달 후 결과 확인*/
     public void registMember(Member member) {
-//        System.out.println("상요자가 입력해서 넘겨준 Member 확인: " + member);
+//        System.out.println("사용자가 입력해서 넘겨준 Member 확인: " + member);
 
         int lastNumberNo = mr.selectLastMemberNo();
         member.setMemNo(lastNumberNo + 1);
