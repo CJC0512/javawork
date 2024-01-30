@@ -30,7 +30,7 @@ public class Application2 {
 
 	    System.out.println("reduceTwoParam = " + reduceTwoParam);
 
-		/* 설명. 인자가 3개일 경우 */
+		/* 설명. 인자가 3개일 경우 */			// 여러가지의 데이터들을 가져와서 합산할 수 있다.
 	    Integer reduceThreeParam = Stream.of(1, 2, 3, 4, 5, 6 ,7 ,8 ,9 ,10)
 								            .reduce(100,
 								                    Integer::sum,

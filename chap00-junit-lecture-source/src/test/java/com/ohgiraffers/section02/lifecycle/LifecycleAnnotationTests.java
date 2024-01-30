@@ -11,7 +11,7 @@ public class LifecycleAnnotationTests {
      * */
 
     /* 필기. 테스트가 실행되기 전 딱 한번만 실행된다. */
-    @BeforeAll
+    @BeforeAll                  // ALL이 들어간 어노테이션은 static 멤버변수가 필수적. 딱 한번만 실행된다.
     public static void beforeALL() {
         System.out.println("beforeAll");
     }

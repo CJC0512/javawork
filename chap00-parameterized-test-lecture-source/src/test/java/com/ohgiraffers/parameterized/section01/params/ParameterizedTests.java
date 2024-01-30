@@ -170,11 +170,11 @@ public class ParameterizedTests {
     }
 
     /* 설명. 어노테이션을 만들어서 메소드명을 일일히 작성하지 않아도 되게 할 수 있다. */
-    @Documented
-    @Target(ElementType.METHOD)
-    @Retention(RetentionPolicy.RUNTIME)
-    @MethodSource("providerStringSource")
-    private @interface MethodSourceStringSource {}
+//    @Documented
+//    @Target(ElementType.METHOD)
+//    @Retention(RetentionPolicy.RUNTIME)
+//    @MethodSource("providerStringSource")
+//    private @interface MethodSourceStringSource {}
 
     /* 목차. 6. ArgumentsProvider를 이용한 메소드 소스 사용 */
     @DisplayName("두 수를 더한 결과를 정상적으로 반환하는지 테스트")
