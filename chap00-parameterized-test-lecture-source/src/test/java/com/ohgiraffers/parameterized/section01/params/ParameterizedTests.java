@@ -16,9 +16,11 @@ import java.util.stream.Stream;
 public class ParameterizedTests {
 
     /* 목차. 1. @ValueSource를 이용한 parameter value 목록 지정 */
+    /* 설명. @ValueSource를 이용하여 한 개의 파라미터로 전달할 값들의 목록을 지정할 수 있다. */
+    /* 설명. 가능한 자료형으로는 short, int, long, float, double, char, java.lang 패키지 클래스들(String 포함) */
     @DisplayName("홀수 짝수 판별 테스트")
     @ParameterizedTest
-    @ValueSource(ints = {1, 3, -1, 15, 123})
+    @ValueSource(ints = {1, 3, -1, 15, 123})            // 각 파라미터에 대하여 실행한다.
     void testIsOdd(int number) {
 
         //when
@@ -66,6 +68,7 @@ public class ParameterizedTests {
     }
 
     /* 목차. 3. 열거형을 이용한 @EnumSource 활용하기 */
+    /* 설명. Enum의 필드 캣수만큼 각각 파라미터로 너헝주며 테스트 메소드 동작시킴 */
     @DisplayName("Month에 정의된 타입들이 1~12월 사이의 범위인지 테스트")
     @ParameterizedTest
     @EnumSource(Month.class)
@@ -155,8 +158,8 @@ public class ParameterizedTests {
 
     @DisplayName("메소드 소스를 활용한 대문자 변환 테스트")
     @ParameterizedTest
-//    @MethodSource("providerStringSource")
-    @MethodSourceStringSource
+    @MethodSource("providerStringSource")
+//    @MethodSourceStringSource
     void testToUpperCaseWithMethodSource(String input, String verifyValue) {
 
         //when
@@ -166,6 +169,7 @@ public class ParameterizedTests {
         Assertions.assertEquals(verifyValue, actual);
     }
 
+    /* 설명. 어노테이션을 만들어서 메소드명을 일일히 작성하지 않아도 되게 할 수 있다. */
     @Documented
     @Target(ElementType.METHOD)
     @Retention(RetentionPolicy.RUNTIME)
@@ -174,7 +178,7 @@ public class ParameterizedTests {
 
     /* 목차. 6. ArgumentsProvider를 이용한 메소드 소스 사용 */
     @DisplayName("두 수를 더한 결과를 정상적으로 반환하는지 테스트")
-    @ParameterizedTest(name = "[{index}] {0} + {1} = {2} (이)가 맞는지 확인")
+    @ParameterizedTest(name = "[{index}] {0} + {1} = {2} (이)가 맞는지 확인")      //
     @ArgumentsSource(SumTwoNumbersArgumentsProvider.class)
     void testSumTwoNumbers(int num1, int num2, int verifyValue) {
 
