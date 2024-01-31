@@ -13,42 +13,43 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-public class Application3Tests {
+public class Application4Tests {
 
-    private static int input1, input2;
+    private static int low1 = 0, low2 = 0;
+    private static int high1, high2;
     private static int[] act1, act2;
     private static int[] exp1, exp2;
 
-    public Application3Tests() {
+    public Application4Tests() {
     }
 
     @BeforeAll
     public static void set() {
 
         /* 예시1 */
-        input1 = 8;
-        act1 = new int[]{33, 39, 20, 4, 16, 24, 19, 28};
-        exp1 = new int[]{4, 16, 19, 20, 24, 28, 33, 39};
+        high1 = 7;      // size는 8
+        act1 = new int[]{7, 25, 33, 8, 12, 5, 29, 31};
+        exp1 = new int[]{5, 7, 8, 12, 25, 29, 31, 33};
 
         /* 예시2 */
-        input2 = 6;
-        act2 = new int[]{14, 38, 5, 26, 17, 19};
-        exp2 = new int[]{5, 14, 17, 19, 26, 38};
+        high2 = 8;      // size는 9
+        act2 = new int[]{46, 13, 14, 23, 28, 31, 32, 17, 3};
+        exp2 = new int[]{3, 13, 14, 17, 23, 28, 31, 32, 46};
     }
 
-    public static Stream<Arguments> provideAscendingSource() {
+    public static Stream<Arguments> provideDescendingSource() {
         return Stream.of(
-                arguments(input1, act1, exp1),
-                arguments(input2, act2, exp2)
+                arguments(low1, high1, act1, exp1),
+                arguments(low2, high2, act2, exp2)
         );
     }
 
-    @DisplayName("삽입 정렬 테스트")
+    @DisplayName("퀵 정렬 테스트")
     @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
     @ParameterizedTest
-    @MethodSource("provideAscendingSource")
-    public void selectionSortTests(int length, int[] actual, int[] expected) {
-        Application3.solution(length, actual);
+    @MethodSource("provideDescendingSource")
+    public void selectionSortTests(int low, int high, int[] actual, int[] expected) {
+        Application4.solution(low, high, actual);
         Assertions.assertArrayEquals(expected, actual);
     }
 }

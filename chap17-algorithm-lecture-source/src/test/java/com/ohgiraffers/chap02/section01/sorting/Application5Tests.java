@@ -13,42 +13,43 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-public class Application3Tests {
+public class Application5Tests {
 
-    private static int input1, input2;
+    private static int low1 = 0, low2 = 0;
+    private static int high1, high2;
     private static int[] act1, act2;
     private static int[] exp1, exp2;
 
-    public Application3Tests() {
+    public Application5Tests() {
     }
 
     @BeforeAll
     public static void set() {
 
         /* 예시1 */
-        input1 = 8;
-        act1 = new int[]{33, 39, 20, 4, 16, 24, 19, 28};
-        exp1 = new int[]{4, 16, 19, 20, 24, 28, 33, 39};
+        high1 = 5;      // size는 8
+        act1 = new int[]{30, 7, 35, 40, 34, 18};
+        exp1 = new int[]{40, 35, 34, 30, 18, 7};
 
         /* 예시2 */
-        input2 = 6;
-        act2 = new int[]{14, 38, 5, 26, 17, 19};
-        exp2 = new int[]{5, 14, 17, 19, 26, 38};
+        high2 = 9;      // size는 9
+        act2 = new int[]{22, 19, 33, 7, 8, 39, 32, 11, 26, 20};
+        exp2 = new int[]{39, 33, 32, 26, 22, 20, 19, 11, 8, 7};
     }
 
-    public static Stream<Arguments> provideAscendingSource() {
+    public static Stream<Arguments> provideDescendingSource() {
         return Stream.of(
-                arguments(input1, act1, exp1),
-                arguments(input2, act2, exp2)
+//                arguments(low1, high1, act1, exp1),
+                arguments(low2, high2, act2, exp2)
         );
     }
 
-    @DisplayName("삽입 정렬 테스트")
+    @DisplayName("병합 정렬 테스트")
     @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
     @ParameterizedTest
-    @MethodSource("provideAscendingSource")
-    public void selectionSortTests(int length, int[] actual, int[] expected) {
-        Application3.solution(length, actual);
+    @MethodSource("provideDescendingSource")
+    public void selectionSortTests(int low, int high, int[] actual, int[] expected) {
+        Application5.solution(low, high, actual);
         Assertions.assertArrayEquals(expected, actual);
     }
 }
