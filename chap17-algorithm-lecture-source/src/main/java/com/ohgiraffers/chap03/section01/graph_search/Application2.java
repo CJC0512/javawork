@@ -6,6 +6,12 @@ import java.util.Objects;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+/* 수업목표. BFS와 x, y좌표를 활용한 문제를 해결할 수 있다. (feat. 배열의 인덱스와 반대 개념) */
+/* 필기.
+*   너비 우선 탐색(gBreadth-First Search)
+*    선입선출 구조에 Queue를 활용한다.
+*    시작 노드에서 출발해 시작 노드를 기준으로 가까운 노드를
+*    먼저 방문하면서 탐색하는 알고리즘이다.*/
 public class Application2 {
     public static BufferedReader toBufferedReader(String str) {
         InputStream is = new ByteArrayInputStream(str.getBytes());

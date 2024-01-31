@@ -3,6 +3,12 @@ package com.ohgiraffers.chap03.section01.graph_search;
 import java.io.*;
 import java.util.StringTokenizer;
 
+/* 수업목표.  DFS를 활용(재귀함수)하는 예제를 이해할 수 있다. */
+/* 필기.
+*   깊이 우선탐색(Dept-First Search)
+*    후입선출 구조에 stack 또는 재귀함수를 활용한다.
+*    한쪽 분기를 정하여 최대 깊이까지 탐색을 마친 후 다른 쪽 분기로 이동하여
+*    다시 탐색을 수행하는 알고리즘이다.*/
 public class Application1 {
 
     static boolean[] visit;
