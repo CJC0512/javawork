@@ -36,12 +36,12 @@ public class Application4 {
         }
 
         System.out.println("==== process call ====");
-        int pivot = process(lo, hi, arr);
-        System.out.println("lo = " + lo + "\nhi = " + hi + "\narr = " + Arrays.toString(arr));
+        int pivotIDX = process(lo, hi, arr);
         System.out.println("==== process end ====\n");
+        System.out.println("lo = " + lo + "\nhi = " + hi + "\narr = " + Arrays.toString(arr));
 
-        solution(lo, pivot, arr);
-        solution(pivot + 1, hi, arr);
+        solution(lo, pivotIDX, arr);
+        solution(pivotIDX + 1, hi, arr);
 
     }
 
