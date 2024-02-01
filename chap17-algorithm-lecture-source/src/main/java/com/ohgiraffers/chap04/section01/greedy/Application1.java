@@ -26,13 +26,17 @@ public class Application1 {
         int num1 = 5;
         int num2 = 3;
         int divN = n % (num1 * num2);       // 5와 3의 공배수로 나눠지고 난 후 나머지
-        int num1Count = (n / (num1 * num2)) * num1;           // 사용되는 5의 개수. 이해하기 쉽도록 굳이 풀어서 작성하였다.
+        int num1Count = (n / (num1 * num2)) * num2;           // 사용되는 5의 개수. 이해하기 쉽도록 굳이 풀어서 작성하였다.
 
         /*  설명. 나머지 수가 3으로 나눠질 수 있는지 확인*/
-        if (divN % 3 == 0) {
+        if (divN % num2 == 0) {
 
             /* 설명. 3으로 나눠진다면, 5의 갯수와 3의 개수를 count에 대입 */
-            count = num1Count + (divN / 3);
+            count = num1Count + (divN / num2);
+        }
+
+        if (n % num1 == 0){
+            count = n / num1;
         }
 
         /* 설명. 반환되는 값은 조건문 성립 여부에 따라 갈린다. */

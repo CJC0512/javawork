@@ -1,4 +1,5 @@
-package com.ohgiraffers.chap04.section01.greedy;
+package com.ohgiraffers.chap06.section01.dp;
+
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -22,8 +23,8 @@ public class Application1Tests {
         /* 예시1 */
         input1 = 18;
         output1 = 4;
-        input2 = 20;
-        output2 = 4;
+        input2 = 4;
+        output2 = -1;
         input3 = 6;
         output3 = 2;
     }
@@ -35,13 +36,12 @@ public class Application1Tests {
                 arguments(input3, output3)
         );
     }
-    @DisplayName("greedy1")
+    @DisplayName("dp1")
     @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
     @ParameterizedTest
     @MethodSource("provideSource")
-    public void greedy1test(Integer input, Integer output) throws Exception {
-//        Integer result = Application1.solution(input);
-        Integer result = Application1.mySolution(input);
+    public void dp1test(Integer input, Integer output) throws Exception {
+        Integer result = Application1.solution(input);
         Assertions.assertEquals(output, result);
     }
 }

@@ -1,4 +1,4 @@
-package com.ohgiraffers.chap04.section01.greedy;
+package com.ohgiraffers.chap06.section01.dp;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -13,35 +13,34 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-public class Application1Tests {
-    private static Integer input1, input2, input3;
-    private static Integer output1,output2, output3;
+public class Application2Tests {
+    private static Integer input1, input2;
+    private static Integer output1,output2;
+
     @BeforeAll
     public static void set() {
 
         /* 예시1 */
-        input1 = 18;
-        output1 = 4;
-        input2 = 20;
-        output2 = 4;
-        input3 = 6;
-        output3 = 2;
+        input1 = 2;
+        output1 = 2;
+        input2 = 9;
+        output2 = 55;
+
     }
 
     public static Stream<Arguments> provideSource() {
         return Stream.of(
                 arguments(input1, output1),
-                arguments(input2, output2),
-                arguments(input3, output3)
+                arguments(input2, output2)
         );
     }
-    @DisplayName("greedy1")
+    @DisplayName("dp2")
     @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
     @ParameterizedTest
     @MethodSource("provideSource")
-    public void greedy1test(Integer input, Integer output) throws Exception {
-//        Integer result = Application1.solution(input);
-        Integer result = Application1.mySolution(input);
+    public void dp2test(Integer input, Integer output) throws Exception {
+        Integer result = Application2.solution(input);
         Assertions.assertEquals(output, result);
     }
+
 }

@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
+/* 수업목표. 트리(Tree) 알고리즘을 활용하는 예제를 이해할 수 있다. */
+/* 필기.
+*   그래프에서 계층적인 구조를 나타내기 위해 최상위 노드인 루트(root) 노드에서 시작하여
+*   하위 노드들로 분기하는 방식으로 구성된 알고리즘이다.
+* */
 public class Application1 {
 
     static int N;
