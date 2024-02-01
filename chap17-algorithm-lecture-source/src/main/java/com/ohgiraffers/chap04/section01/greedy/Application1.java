@@ -1,5 +1,10 @@
 package com.ohgiraffers.chap04.section01.greedy;
 
+/* 수업목표. 그리디(Greedy) 알고리즘에 대해 이해할 수 있다. */
+/* 필기.
+*   현재 상태에서 최적의 해답(최대 이익을 주는 해답)을 찾기 위해 적용하는 알고리즘으로 앞의 선택이
+*   이후에 영향을 주지 않을 때 적용 가능하다.
+* */
 public class Application1 {
     public static int solution(int n) {
         int count = 0;      // 들고 갈 최소 봉지 갯수
