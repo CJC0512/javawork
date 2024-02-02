@@ -24,7 +24,7 @@
     <file type="web" url="file://$PROJECT_DIR$/chap17-algorithm-lecture-source" />
     <file type="web" url="file://$PROJECT_DIR$/selfstudy" />
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
